@@ -621,45 +621,6 @@ echo ""
 sar 1 1 >/dev/null
 
 
-echo "${GREEN}#### ProjectDiscovery Pinned Tools ####${RESET}"
-
-echo "${BLUE} installing naabu${RESET}"
-go get -u github.com/projectdiscovery/naabu/cmd/naabu
-echo "${BLUE} done${RESET}"
-echo ""
-
-
-echo "${BLUE} installing dnsprobe${RESET}"
-go get -u github.com/projectdiscovery/dnsprobe
-echo  "${BLUE} done${RESET}"
-echo ""
-
-echo "${BLUE} installing nuclei${RESET}"
-go get -u github.com/projectdiscovery/nuclei/v2/cmd/nuclei
-echo "${BLUE} done${RESET}"
-echo ""
-
-echo "${BLUE} installing subfinder${RESET}"
-go get -u github.com/projectdiscovery/subfinder/cmd/subfinder
-echo "${BLUE} done${RESET}"
-echo ""
-
-echo "${BLUE} installing httpx${RESET}"
-go get -u github.com/projectdiscovery/httpx/cmd/httpx
-echo "${BLUE} done${RESET}"
-echo ""
-
-echo "${BLUE} installing shuffledns${RESET}"
-go get -u github.com/projectdiscovery/shuffledns/cmd/shuffledns
-echo "${BLUE} done${RESET}"
-echo ""
-
-echo "${BLUE} installing chaos-client${RESET}"
-go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
-echo "${BLUE} done${RESET}"
-echo ""
-sar 1 1 >/dev/null
-
 
 echo "${GREEN} #### Downloading wordlists #### ${RESET}"
 git clone https://github.com/assetnote/commonspeak2-wordlists ~/tools/Wordlists/commonspeak2-wordlists
