@@ -1,4 +1,7 @@
 # BBHTv2
+
+[Tool Link](https://github.com/aashishsec/BBHTv2/)
+
 A single script for all the  tools you need for bug bounty. Thanks to the original creator of bbhtv1 for the idea >> https://github.com/nahamsec
 
 Bug Bounty Hunting Tools is a script to install the most popular tools
