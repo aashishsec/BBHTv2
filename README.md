@@ -44,5 +44,5 @@ chmod +x bbhtv2.1.sh
 ```
 ### One Liner Install
 ```
-curl https://raw.githubusercontent.com/unethicalnoob/BBHTv2/master/bbhtv2.sh | sudo bash 
+curl https://raw.githubusercontent.com/aashishsec/BBHTv2/master/bbhtv2.sh | sudo bash 
 ```
