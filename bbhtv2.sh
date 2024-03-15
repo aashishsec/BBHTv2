@@ -598,10 +598,13 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE} installing gau${RESET}"
-go get -u github.com/lc/gau
+go install github.com/lc/gau/v2/cmd/gau@latest
 echo "${BLUE} done${RESET}"
 echo ""
 
+go install github.com/tomnomnom/waybackurls@latest
+go install github.com/tomnomnom/assetfinder@latest
+go install github.com/jaeles-project/gospider@latest
 
 
 echo "${BLUE} LinkFinder${RESET}"
