@@ -292,6 +292,13 @@ sar 1 1 >/dev/null
 
 echo "${GREEN} #### Installing Cloud workflow Tools #### ${RESET}"
 
+echo "${BLUE}AWS CLI${RESET}"
+curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+unzip awscliv2.zip
+sudo ./aws/install
+echo "${BLUE} done${RESET}"
+echo ""
+
 #install s3-buckets-finder
 echo "${BLUE} s3-buckets-finder${RESET}"
 git clone https://github.com/gwen001/s3-buckets-finder.git ~/tools/s3-buckets-finder
