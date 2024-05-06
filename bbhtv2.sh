@@ -702,6 +702,7 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE} installing amass${RESET}"
+go install -v github.com/owasp-amass/amass/v4/...@master
 
 cd ~ && rm -rf amass_linux_amd64* amass_linux_amd64.zip*
 echo "${BLUE} done${RESET}"
