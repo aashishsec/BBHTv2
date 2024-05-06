@@ -31,11 +31,7 @@ echo ""
 sudo apt-get -y update
 sudo apt-get -y upgrade
 
-sudo add-apt-repository -y ppa:apt-fast/stable < /dev/null
-sudo echo debconf apt-fast/maxdownloads string 16 | debconf-set-selections
-sudo echo debconf apt-fast/dlflag boolean true | debconf-set-selections
-sudo echo debconf apt-fast/aptmanager string apt-get | debconf-set-selections
-sudo apt install -y apt-fast
+/bin/bash -c "$(curl -sL https://git.io/vokNn)"
 
 sudo apt-fast install -y apt-transport-https
 sudo apt-fast install -y libcurl4-openssl-dev
@@ -48,7 +44,7 @@ sudo apt-fast install -y python-setuptools
 sudo apt-fast install -y libldns-dev
 sudo apt-fast install -y python3-pip
 sudo apt-fast install -y python-dnspython
-sudo apt-fast install -y git
+sudo apt-fast install -y git ffuf wfuzz
 sudo apt-fast install -y npm
 sudo apt-fast install -y nmap phantomjs 
 sudo apt-fast install -y gem
@@ -163,7 +159,7 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE} installing dirsearch${RESET}"
-git clone https://github.com/maurosoria/dirsearch.git ~/tools/dirsearch
+pip install dirsearch
 echo "${BLUE} done${RESET}"
 echo ""
 
@@ -295,13 +291,6 @@ sar 1 1 >/dev/null
 
 
 echo "${GREEN} #### Installing Cloud workflow Tools #### ${RESET}"
-
-echo "${BLUE} Instaliing awscli${RESET}"
-sudo pip3 install awscli --upgrade --user
-echo "${BLUE} Don't forget to set up AWS credentials!${RESET}"
-echo "${BLUE} done${RESET}"
-echo ""
-
 
 #install s3-buckets-finder
 echo "${BLUE} s3-buckets-finder${RESET}"
@@ -688,11 +677,6 @@ go get github.com/tomnomnom/hacks/filter-resolved
 echo "${BLUE} done${RESET}"
 echo ""
 
-echo "${BLUE} installing fff${RESET}"
-go get -u github.com/tomnomnom/fff
-echo "${BLUE} done${RESET}"
-echo ""
-
 echo "${BLUE} installing qsreplace${RESET}"
 go get -u github.com/tomnomnom/qsreplace
 echo "${BLUE} done${RESET}"
@@ -702,7 +686,7 @@ sar 1 1 >/dev/null
 echo "${GREEN} #### Other other Tools #### ${RESET}"
 
 echo "${BLUE} installing arjun${RESET}"
-git clone https://github.com/s0md3v/Arjun.git ~/tools/Arjun
+pin 
 echo "${BLUE} done${RESET}"
 echo ""
 
@@ -718,7 +702,6 @@ echo "${BLUE} done${RESET}"
 echo ""
 
 echo "${BLUE} installing amass${RESET}"
-cd ~ && echo -e "Downloading amass version ${AMASS_VERSION} ..." && wget -q https://github.com/OWASP/Amass/releases/download/v${AMASS_VERSION}/amass_linux_amd64.zip && unzip amass_linux_amd64.zip && mv amass_linux_amd64/amass /usr/bin/
 
 cd ~ && rm -rf amass_linux_amd64* amass_linux_amd64.zip*
 echo "${BLUE} done${RESET}"
